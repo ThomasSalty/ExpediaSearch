@@ -14,25 +14,29 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    Thomasson's <asp:Image runat="server" ImageAlign="TextTop" ImageUrl="http://media.expedia.com/media/content/shared/images/navigation/expedia.com.png" ToolTip="Expedia Website" /> search
+                    Searching on <asp:Image runat="server" ImageAlign="TextTop" ImageUrl="http://media.expedia.com/media/content/shared/images/navigation/expedia.com.png" ToolTip="Expedia Website" AlternateText="Expedia Logo" /> for cheap flights in Latin America
                 </h1>
             </div>
             <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false" Visible="false">
                     <AnonymousTemplate>
                         [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                         Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
                         [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
+                    </LoggedInTemplate>                    
                 </asp:LoginView>
+            </div>
+            <div class="signature">
+                <br />
+                <asp:Label ID="Label1" runat="server" ForeColor="#cfdbe6" Text="by Thomas <b>Salty</b>" />                
             </div>
             <div class="clear hideSkiplink">
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>                        
                     </Items>
                 </asp:Menu>
             </div>

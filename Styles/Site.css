@@ -3,7 +3,8 @@
 
 body   
 {
-    background: #b6b7bc; /* bottom grey */
+    /*background: #b6b7bc; /* grey */
+    background-image: url(../Images/noise40x40.png);
     font-size: .80em;
     font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
     margin: 0px;
@@ -48,7 +49,7 @@ h1, h2, h3, h4, h5, h6
 }
 
 h1
-{
+{    
     font-size: 1.5em;
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -92,6 +93,13 @@ first child of the left and right table columns */
     background-color: #fff;
     margin: 20px auto 0px auto;
     border: 1px solid #496077;
+}
+
+.signature
+{   
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 .header
@@ -247,8 +255,7 @@ div.accountInfo
 .title
 {
     display: block;
-    float: left;
-    text-align: left;
+    float: left;   
     width: auto;
 }
 
