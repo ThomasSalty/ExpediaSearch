@@ -13,4 +13,11 @@ public partial class _Default : System.Web.UI.Page
     {
         
     }
+
+    protected void MessageBox(string message)
+    {
+        Label lbl = new Label();
+        lbl.Text = "<script language='javascript'>" + Environment.NewLine + "window.alert('" + message + "')</script>";
+        Page.Controls.Add(lbl);
+    }
 }
