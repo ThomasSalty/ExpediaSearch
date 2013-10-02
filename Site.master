@@ -14,7 +14,12 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    Searching on <asp:Image runat="server" ImageAlign="TextTop" ImageUrl="http://media.expedia.com/media/content/shared/images/navigation/expedia.com.png" ToolTip="Expedia Website" AlternateText="Expedia Logo" /> for cheap flights in Latin America
+                    Searching on
+                    <asp:Image ID="ExpediaLogo" runat="server" ImageAlign="TextTop"
+                    ImageUrl="http://media.expedia.com/media/content/shared/images/navigation/expedia.com.png"
+                    ToolTip="Expedia Website"
+                    AlternateText="Expedia Logo" />
+                    for cheap flights in Latin America
                 </h1>
             </div>
             <div class="loginDisplay">
@@ -43,8 +48,17 @@
         </div>
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                <br /><hr />
+                <p>   
+                    <asp:HyperLink ID="flightdiaryBanner" runat="server"
+                    ImageUrl="~/Images/Thomasson.png"
+                    NavigateUrl="http://flightdiary.net/Thomasson"
+                    Target="_blank"
+                    ToolTip="My Flightdiary.net profile" >
+                    </asp:HyperLink>       
+                </p>           
         </div>
-        <div class="clear">
+        <div class="clear">            
         </div>
     </div>
     <div class="footer">
