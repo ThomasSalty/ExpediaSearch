@@ -1,10 +1,13 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
 <head runat="server">
     <title></title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Flights, Cheap Flights, Expedia, somee.com, thomassalty, thomassalty.somee.com" />	
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/ico" href="http://i1.asp.net/common/www-css/i/favicon.ico?v=1" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"> </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -14,7 +17,12 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    Searching on <asp:Image runat="server" ImageAlign="TextTop" ImageUrl="http://media.expedia.com/media/content/shared/images/navigation/expedia.com.png" ToolTip="Expedia Website" AlternateText="Expedia Logo" /> for cheap flights in Latin America
+                    Searching on
+                    <asp:Image ID="ExpediaLogo" runat="server" ImageAlign="TextTop"
+                    ImageUrl="http://media.expedia.com/media/content/shared/images/navigation/expedia.com.png"
+                    ToolTip="Expedia Website"
+                    AlternateText="Expedia Logo" />
+                    for cheap flights in Latin America
                 </h1>
             </div>
             <div class="loginDisplay">
@@ -43,12 +51,21 @@
         </div>
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                <br /><hr />
+                <p>   
+                    <asp:HyperLink ID="flightdiaryBanner" runat="server"
+                    ImageUrl="~/Images/Thomasson.png"
+                    NavigateUrl="http://flightdiary.net/Thomasson"
+                    Target="_blank"
+                    ToolTip="My Flightdiary.net profile" >
+                    </asp:HyperLink>       
+                </p>           
         </div>
-        <div class="clear">
+        <div class="clear">            
         </div>
     </div>
     <div class="footer">
-        
+        &copy; <%= DateTime.Now.Year %> Thomas Salty <br /><br />
     </div>
     </form>
 </body>
